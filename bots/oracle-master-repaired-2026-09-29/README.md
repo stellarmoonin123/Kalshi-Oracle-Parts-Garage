@@ -23,7 +23,7 @@ Anonymous health output excludes private balances and operational details. Damag
 Latest local checks passed: 82 focused tests (29 new/config regressions, 44 ledger/recovery/quote/fatal safety tests, and 9 checkpoint tests), shared/workspace typechecks, production build and all 368 dashboard tests.
 Full PostgreSQL CI for this exact commit:
 https://github.com/stellarmoonin123/Kalshi-oracle/actions/runs/36639403534
-Status at packaging: running. No passing result is claimed yet for this commit.
+Exact-commit PostgreSQL CI passed: 3,369 API tests passed, 0 failed, 0 cancelled, 468 skipped; 368 dashboard tests passed. Locked install, disposable database schema, shared/workspace typechecks, API output completeness checks, schema drift, production build and dependency audit passed (no known vulnerabilities reported). Skipped tests are not verified coverage.
 
 Earlier full repair CI passed on d01bf189662f7997e1404f0ccd60cb27aa974b10: 3,364 API passes, 0 failures, 482 skips; 368 dashboard passes; install/typecheck/schema/build/audit gates passed.
 
