@@ -8,7 +8,7 @@ Scope: repaired original Oracle system, based on source commit 5c78c01a02a23e412
 | --- | --- | --- | --- |
 | High | routes/health.ts returns knownCents, error details, build identity and subsystem state on public /healthz | Anonymous callers could read private desk information | Anonymous response uses an explicit two-field allowlist; authenticated report remains compatible. Regression verifies private fields are absent. |
 | High | lib/config-persist.ts catches every load error and returns an empty object | Existing damaged or unreadable operator config is silently treated as first boot | Only ENOENT returns defaults; invalid JSON, non-object JSON and read errors stop hydration while preserving the file. Regression fails before repair and passes afterward. |
-| Medium | lib/accounts/rate-limit.ts prunes only expired identifiers but accepts unlimited active keys | Identifier churn can grow the login map without bound | Cap tracked keys, prune expired entries and refuse new keys at capacity without evicting existing blocked identifiers. Regression fails before repair and passes afterward. |
+| Medium | lib/accounts/rate-limit.ts prunes only expired identifiers but accepts unlimited active keys | Identifier churn and oversized submitted identifiers can grow the login map without bound | Retain fixed-size SHA-256 fingerprints, cap tracked keys, prune expired entries and refuse new keys at capacity without evicting existing blocked identifiers. Saturation regression fails before repair and passes afterward; long-identifier regression verifies retained key size. |
 | Medium | README setup requires a missing .env.example and describes the obsolete shared-key auth | Fresh installation instructions fail and operators configure wrong authentication | Add a credential-free example and document account sessions, ADMIN gating and the pinned toolchain. |
 | Medium | Readiness workflow only handles PR events and master pushes | Later review-branch commits lack directly triggered verification | Enable push-triggered disposable-PostgreSQL verification for the existing repair branch. |
 
@@ -24,7 +24,7 @@ Scope: repaired original Oracle system, based on source commit 5c78c01a02a23e412
 
 ## Validation
 
-Before repair, the saturation and damaged-config regressions failed. After repair, 28 focused tests passed; workspace typechecks and production build passed. Full PostgreSQL CI must be checked on the published follow-up commit. Tests do not touch production state. No deployment or live enablement is performed.
+Before repair, the saturation and damaged-config regressions failed. After repair, 29 focused regressions passed, plus 44 ledger/recovery/quote/fatal safety tests and 9 checkpoint tests. Workspace typechecks and production build passed. Full PostgreSQL CI must be checked on the published follow-up commit. Tests do not touch production state. No deployment or live enablement is performed.
 
 ## Rollback
 
