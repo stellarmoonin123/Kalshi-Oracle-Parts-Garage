@@ -5,6 +5,6 @@ Place for replaceable parts and storage
 
 | Entry | Contents | Status |
 | --- | --- | --- |
-| [Oracle — repaired original system, 2026-09-29](bots/oracle-master-repaired-2026-09-29/README.md) | Complete 1,414-file source ZIP, setup instructions, checksum, and verification evidence | Paper-only source snapshot; final timeout follow-up has focused verification only |
+| [Oracle — repaired original system, 2026-09-29](bots/oracle-master-repaired-2026-09-29/README.md) | Complete 1,419-file source ZIP, setup guide, audit, checksum and verification evidence | Updated security/persistence fixes; full CI running; paper release drills outstanding |
 
-Each entry is stored separately. Uploading an entry does not deploy it or replace the operating bot.
+Entries are stored independently. Adding a source snapshot does not deploy it or replace the operating bot.
