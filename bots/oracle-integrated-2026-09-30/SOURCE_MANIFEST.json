@@ -1,0 +1,33 @@
+{
+  "sourceRepository": "stellarmoonin123/Kalshi-oracle",
+  "sourceCommit": "440bd2a4748e9d76771103c0179e576b9ea05b09",
+  "sourceTree": "fc6898baa96f23a30aaf50bbb83d082ab0e9ee8f",
+  "testedHead": "56acba9fade2491ca9327fc708ef880f389bca35",
+  "archive": "complete-source.zip",
+  "archiveParts": 15,
+  "files": 1587,
+  "bytes": 5513937,
+  "sha256": "13bc7eefca59f1eb324fcb5ad1893bcd0dc0563e3119ab88527316a98b6b6586",
+  "verification": {
+    "apiPass": 3396,
+    "apiFail": 0,
+    "apiSkip": 498,
+    "apiTestFiles": 453,
+    "reportGuardPass": 7,
+    "dashboardPass": 382,
+    "isolatedEnginePass": 182,
+    "comparisonPostgresPass": 3,
+    "comparisonDashboardLoginPass": 14,
+    "workflows": [
+      "Paper Production Readiness",
+      "ARIA Integration",
+      "Oracle 2.1 Bot",
+      "Oracle 2.1 Comparison Desk"
+    ]
+  },
+  "deployment": {
+    "status": "Not deployed by this integration",
+    "observedFlyRelease": "v36",
+    "target": "kalshi-oracle-desk.fly.dev"
+  }
+}
