@@ -1,0 +1,21 @@
+{
+  "sourceRepository": "stellarmoonin123/Kalshi-oracle",
+  "masterCommit": "9516267b4d351efa936a9ab9c10037dc3f726802",
+  "sourceTree": "fbb2c37606cd3968ebbd58b7a4613bb7e91868d9",
+  "testedPrHead": "01e5a6d2f1e98295015369f1bda715c29e67d4d7",
+  "pr": 30,
+  "trackedFiles": 1595,
+  "archiveBytes": 5589255,
+  "archiveSha256": "2250f63241b5e05ef5c88c7e9feb2004f7d5915b191c22297d56e5bd02bc9605",
+  "archiveParts": 15,
+  "prCi": {
+    "apiPassed": 3413,
+    "apiFailed": 0,
+    "apiSkipped": 516,
+    "dashboardPassed": 382,
+    "releasePassed": 19,
+    "moduleReceiptGuardPassed": 7
+  },
+  "deploymentStatus": "Not yet verified. Master push CI and Fly release gates are separate from this source snapshot.",
+  "archiveNote": "Archive made from an equivalent local tree; its ZIP commit comment is local, not the master merge SHA. Every tracked file and all part Git blob hashes were verified."
+}
